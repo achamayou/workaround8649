@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: "[Ubuntu] Remove GCC 13 from runner image"
-      if: (inputs.os == 'ubuntu-latest') || (inputs.os == 'ubuntu-22.04') || (inputs.os == 'default')
+      if: inputs.os == 'ubuntu-22.04'
       shell: bash
       run: |
         echo "Runs on: ${{ inputs.os }}"
